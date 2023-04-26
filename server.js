@@ -17,7 +17,7 @@ this.main = async () => {
 
     server.applyMiddleware({ app });
 
-    app.listen({ port: 4200 }, () => {
+    app.listen({ port: 4000 }, () => {
         console.log(`Server run success link: http://localhost:4000${server.graphqlPath}`);
     });
 
