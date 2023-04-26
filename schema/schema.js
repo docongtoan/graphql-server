@@ -5,20 +5,22 @@ const typeDefs = gql`
         id: ID
         name: String
         genre: String
+        author: Author
     }
 
     type Author {
         id: ID!
         name: String
         age: Int
+        book: [Book]
     }
 
     #root type
     type Query {
         books: [Book],
-        book(id: Int): Book,
+        book(id: ID!): Book,
         authors: [Author],
-        author(id: Int): Author
+        author(id: ID!): Author
     }
 `
 
